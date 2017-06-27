@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>KDF using SHA512</title>
+	<script type="text/JavaScript" src="sha512.js"></script>
+	<script type="text/JavaScript">
+		function computeHash() {
+			var hash = sha512(document.getElementById('salt').value
+					+ document.getElementById( 'key').value)
+			document.getElementById('key').value = ""
+			document.getElementById('out').innerHTML = hash
+		}
+		function clearFields() {
+			document.getElementById('key').value = ""
+			document.getElementById('out').innerHTML = ""
+		}
+	</script>
+</head>
+<body>
+	<table cellpadding="5">
+		<tr><td>Salt:</td><td><input type="text"     id="salt" size="100"></td></tr>
+		<tr><td>Key: </td><td><input type="password" id="key"  size="100"></td></tr>
+		<tr><td><input type="button" value="Compute hash!" onclick="computeHash()"></td>
+		    <td><input type="button" value="Clear"         onclick="clearFields()"></td></tr>
+	</table>
+	<h3>Output</h3>
+	<div id="out"></div>
+
+</body>
+</html>
