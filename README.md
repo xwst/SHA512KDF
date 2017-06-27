@@ -11,6 +11,8 @@ A given salt and master key are concatenated and the SHA512 sum of the
 combined string SHA512($salt + $key) is calculated.
 
 #### Usage
+Download necessary files of visit live version at
+https://xwst.github.io/SHA512KDF/kdf.html.
 Enter masterkey and salt/service name to obtain derived key.
 
 #### Requirements
